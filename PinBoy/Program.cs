@@ -15,6 +15,9 @@ namespace PinBoy
 
         public async Task MainAsync()
         {
+            Console.WriteLine($"Starting, UTC: {DateTime.UtcNow}");
+            Console.WriteLine($"Work dir is: {Directory.GetCurrentDirectory()}");
+
             var builder = new ServiceCollection();
             
             var client = new DiscordSocketClient(new DiscordSocketConfig
