@@ -18,6 +18,12 @@ namespace PinBoy
             Console.WriteLine($"Starting, UTC: {DateTime.UtcNow}");
             Console.WriteLine($"Work dir is: {Directory.GetCurrentDirectory()}");
 
+            Console.WriteLine("Files:");
+            foreach (var f in Directory.GetFiles(Directory.GetCurrentDirectory()))
+            {
+                Console.WriteLine(f);
+            }
+
             var builder = new ServiceCollection();
             
             var client = new DiscordSocketClient(new DiscordSocketConfig
