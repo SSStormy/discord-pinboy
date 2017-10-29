@@ -56,9 +56,9 @@ namespace PinBoy
             var guildChannel = chnl as IGuildChannel;
 
             if (guildChannel?.GuildId != _cfg.GuildId)
-                return false;
+                return true;
 
-            return true;
+            return false;
         } 
 
         private async Task ClientOnReactionsCleared(Cacheable<IUserMessage, ulong> cacheMsg, ISocketMessageChannel channel)
