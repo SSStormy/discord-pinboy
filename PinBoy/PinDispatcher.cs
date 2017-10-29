@@ -46,7 +46,7 @@ namespace PinBoy
             PinEmote = new Emoji("⭐");
             Debug.Assert(PinEmote != null);
 
-            EmoteThreshold = 1;
+            EmoteThreshold = 2;
         }
 
         public bool IsIgnored(ISocketMessageChannel chnl)
@@ -96,9 +96,6 @@ namespace PinBoy
             var msg = await cacheMsg.GetOrDownloadAsync();
 
             if (!msg.Reactions.TryGetValue(PinEmote, out var data))
-                return;
-
-            if (IsIgnored(channel))
                 return;
 
             if (data.ReactionCount >= EmoteThreshold)
