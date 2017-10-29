@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  pinboy:
+    image: pinboy
+    build:
+      context: ./PinBoy
+      dockerfile: Dockerfile

@@ -11,4 +11,10 @@
     <PackageReference Include="WebSocket4Net" Version="0.15.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update=".dockerignore">
+      <DependentUpon>Dockerfile</DependentUpon>
+    </None>
+  </ItemGroup>
+
 </Project>
