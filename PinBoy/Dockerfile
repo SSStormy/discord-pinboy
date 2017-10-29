@@ -9,10 +9,9 @@ RUN dotnet restore
 COPY . ./
 RUN dotnet publish -c Release -o out
 
-COPY config.json /app
-
 # Build runtime image
 FROM microsoft/aspnetcore:2.0
 WORKDIR /app
 COPY --from=build-env /app/out .
+COPY config.json ./
 ENTRYPOINT ["dotnet", "PinBoy.dll"]
