@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PinBoy", "PinBoy\PinBoy.csproj", "{5A118CC5-FC37-47FA-9E5A-950D74541D87}"
-EndProject
-Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{91F62AC7-2368-492E-A28C-C1743FA55D2F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PinBoy", "PinBoy\PinBoy.csproj", "{5A118CC5-FC37-47FA-9E5A-950D74541D87}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +15,6 @@ Global
 		{5A118CC5-FC37-47FA-9E5A-950D74541D87}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A118CC5-FC37-47FA-9E5A-950D74541D87}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A118CC5-FC37-47FA-9E5A-950D74541D87}.Release|Any CPU.Build.0 = Release|Any CPU
-		{91F62AC7-2368-492E-A28C-C1743FA55D2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{91F62AC7-2368-492E-A28C-C1743FA55D2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{91F62AC7-2368-492E-A28C-C1743FA55D2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{91F62AC7-2368-492E-A28C-C1743FA55D2F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
