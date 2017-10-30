@@ -124,12 +124,12 @@ namespace PinBoy
 
             var links = msg.Content.Split("\t\n ".ToCharArray(), StringSplitOptions.RemoveEmptyEntries).Where(s => s.StartsWith("http://") || s.StartsWith("www.") || s.StartsWith("https://"));
             foreach (var s in links)
-            {
                 builder.WithImageUrl(s);
-            }
 
             if (msg.Attachments.Any())
                 builder.WithImageUrl(msg.Attachments.Last().Url);
+
+            builder.WithFooter(f => f.WithText($"Posted {msg.CreatedAt.UtcDateTime} UTC"));
 
             var embed = builder.Build();
             var pin = await PinChannel.SendMessageAsync(BuildKey(msg), false, embed);
