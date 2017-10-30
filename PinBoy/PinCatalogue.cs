@@ -127,7 +127,9 @@ namespace PinBoy
             {
                 builder.WithImageUrl(s);
             }
-                
+
+            if (msg.Attachments.Any())
+                builder.WithImageUrl(msg.Attachments.Last().Url);
 
             var embed = builder.Build();
             var pin = await PinChannel.SendMessageAsync(BuildKey(msg), false, embed);

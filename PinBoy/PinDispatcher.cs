@@ -46,7 +46,12 @@ namespace PinBoy
             PinEmote = new Emoji("⭐");
             Debug.Assert(PinEmote != null);
 
+#if DEBUG
+            EmoteThreshold = 1;
+#else
             EmoteThreshold = 2;
+#endif
+
         }
 
         public bool IsIgnored(ISocketMessageChannel chnl)
