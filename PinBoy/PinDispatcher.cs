@@ -49,9 +49,8 @@ namespace PinBoy
 #if DEBUG
             EmoteThreshold = 1;
 #else
-            EmoteThreshold = 2;
+            EmoteThreshold = 3;
 #endif
-
         }
 
         public bool IsIgnored(ISocketMessageChannel chnl)
