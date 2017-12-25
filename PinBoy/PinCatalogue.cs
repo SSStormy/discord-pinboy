@@ -109,8 +109,7 @@ namespace PinBoy
             return $"{msg.Channel.Id};{msg.Id}\n";
         }
 
-        
-
+     
         private async Task PostPin(IMessage msg)
         {
             var builder = new EmbedBuilder();
