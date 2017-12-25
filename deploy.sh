@@ -3,7 +3,7 @@
 instance='pinboy-run'
 container='pinboy'
 
-git pull
+git pull origin master
 
 docker stop $instance
 docker rm $instance
