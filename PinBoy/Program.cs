@@ -28,14 +28,14 @@ namespace PinBoy
             builder.AddSingleton(client);
             builder.AddSingleton(s => new PinDispatcher(s));
             builder.AddSingleton(s => new PinCatalogue(s));
-            builder.AddSingleton(s => new CrashWhiteFlagger(s));
+//            builder.AddSingleton(s => new CrashWhiteFlagger(s));
             builder.AddSingleton(s => JsonConvert.DeserializeObject<BotConfig>(File.ReadAllText("config.json")));
             var services = builder.BuildServiceProvider();
 
             client.Log += Log;
 
             services.ThrowOrGet<PinDispatcher>();
-            services.ThrowOrGet<CrashWhiteFlagger>();
+//           services.ThrowOrGet<CrashWhiteFlagger>();
             services.ThrowOrGet<PinCatalogue>();
 
             var t = services.ThrowOrGet<BotConfig>().Token;
