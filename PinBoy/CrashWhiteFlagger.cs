@@ -6,13 +6,13 @@ using Discord.WebSocket;
 namespace PinBoy
 {
     /// <summary>
-    /// Purpose: react with the white flag emote every time we find a message from "@Crash" 
+    /// Purpose: react with the <see cref="_whiteflagEmote"/> every time we find a message from the user with the id found in <see cref="_cfg.EmoteReactUserId"/>
     /// </summary>
     public sealed class CrashWhiteFlagger
     {
         private readonly BotConfig _cfg;
 
-        private readonly IEmote _whiteflagEmote = new Emoji("🏳");
+        private readonly IEmote _whiteflagEmote = new Emoji("🏳️‍🌈");
 
         public CrashWhiteFlagger(IServiceProvider services)
         {
@@ -24,7 +24,7 @@ namespace PinBoy
 
         private async Task ClientOnMessageReceived(SocketMessage msg)
         {
-            if (msg.Author.Id != _cfg.CrashUserId)
+            if (msg.Author.Id != _cfg.EmoteReactUserId)
                 return;
 
             if (msg is IUserMessage userMsg)
